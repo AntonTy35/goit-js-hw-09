@@ -10,6 +10,7 @@ const hoursEl = document.querySelector('[data-hours]');
 const minutesEl = document.querySelector('[data-minutes]');
 const secondsEl = document.querySelector('[data-seconds]');
 const fieldEl = document.querySelectorAll('.field');
+const valueEl = document.querySelectorAll('.value');
 
 startBtn.setAttribute('disabled', 'true');
 
@@ -18,10 +19,16 @@ fieldEl.forEach(el => {
   el.style.flexDirection = 'column';
   el.style.justifyContent = 'center';
 });
+valueEl.forEach(el => {
+  el.style.fontFamily = 'Montserrat,sans-serif';
+  el.style.fontSize = '36px';
+  el.style.lineHeight = 1.1;
+  el.style.fontWeight = 500;
+});
 
 timEls.style.display = 'flex';
-timEls.style.columnGap = '10px';
-timEls.style.marginTop = '10px';
+timEls.style.columnGap = '15px';
+timEls.style.marginTop = '15px';
 
 const options = {
   enableTime: true,
